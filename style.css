@@ -14,3 +14,169 @@ p{
   margin:0;
 }
 
+hrml, body{
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  color: #2A2A2A;
+}
+
+.wrapper{
+  width:100%;
+  overflow: hidden;
+}
+
+.header {
+  widht: 100vw;
+}
+
+.header__top {
+  margin-left: 7.2916vw;
+  margin-right: 7.1875vw;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, .025);
+}
+
+.logo{
+  width: 19.6875vw;
+  height: 2.60416vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img{
+  width: 11.09375vw;
+}
+
+.logo p{
+  width: 7.39583vw;
+  font-weight: 400;
+  font-size: 0.572916vw;
+  line-height: 1.0416vw;
+  align-items: center;
+  letter-spacing: 0.02em;
+}
+
+.head__info{
+  width: 10.52083vw;
+  height:  1.822916vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head__info img{
+  width: 1.822916vw;
+}
+
+.head__info p{
+  width: 8.177083vw;
+  font-weight: 400;
+  font-size: 0.572916vw;
+  line-height: 0.9375vw;
+}
+
+.head__map {
+  width: 7.39583vw;
+  height: 0.989583vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head__map img{
+  width: 0.625vw;
+  height: 0.78125vw;
+}
+.head__map button{
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 0.572916vw;
+  line-height: 0.78125vw;
+  letter-spacing: 0.05em;
+
+}
+.head__calc {
+  width: 10.052083vw;
+  height: 1.927083vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head__calc img{
+  width: 1.822916vw;
+  height: 1.822916vw;
+}
+
+.head__calc a{
+  width: 7.65625vw;
+  color: #2A2A2A;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.572916vw;
+  line-height: 0.989583vw;
+
+}
+
+.head__messangers {
+  width: 12.552083vw;
+  height: 1.875vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head__messangers p{
+  width: 5.52083vw;
+  font-weight: 400;
+  font-size: 0.572916vw;
+  line-height: 0.9375vw;
+  letter-spacing: 0.03em;
+}
+
+.head__messangers img{
+  width: 1.822916vw;
+  height: 1.822916vw;
+}
+
+.head_tel {
+  width: 10.46875vw;
+  height: 3.177083vw;
+}
+
+
+.head_tel__top {
+  display: felx;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.625vw;
+  line-height: 0.52083vw;
+  letter-spacing: 0.02em;
+}
+
+.head_tel__center a{
+  font-weight: 700;
+  font-size: 1.0416vw;
+  line-height: 0.52083vw;
+  color: #2A2A2A;
+  text-decoration: none;
+}
+
+.head_tel__bottom{
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 0.625vw;
+  line-height: 1.09375vw;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+
+}
+.intro {}
+.intro__h1 {}
+.intro__text {}
+.btn {}
+.intro__items {}
+.intro__item {}
