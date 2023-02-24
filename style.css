@@ -554,3 +554,93 @@ html{
 .intro__items p span{
   font-weight: 700;
 }
+
+/*------------------------------------------*/
+
+.popup__form__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.80);
+    color: #FFFFFF;
+}
+
+.popup__form__inner {
+  position: relative;
+  width: 50rem;
+  height: 60rem;
+  padding: 4.5rem 6.8rem 7.5rem;
+  background-color: #21211F;
+}
+.exit__btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 3.5rem;
+  right: 3.7rem;
+  cursor: pointer;
+}
+
+.exit__btn img{
+  width: 2rem;
+  height: 2rem;
+}
+
+.popup__form__inner h1{
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  text-align: center;
+
+}
+
+.form__info {
+  margin-bottom: 3.4rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-align: center;
+
+}
+
+.form__text {
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  text-align: center;
+}
+
+.popup__form__inner input[type="tel"]{
+  width: 36.3rem;
+  height: 8.5rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  background: #FAFAFA;
+  box-shadow: inset 0px 0px 21px rgba(255, 255, 255, 0.4);
+  border-radius: 73px;
+}
+
+.popup__form__inner .btn__submit{
+  width: 36.3rem;
+  height: 8.5rem;
+  margin-bottom: 2.5rem;
+  background: #FD2016;
+  border: none;
+  border-radius: 500px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.form__checkbox__text {
+  display: flex;
+  justify-content: center;
+
+}
