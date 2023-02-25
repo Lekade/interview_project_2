@@ -25,8 +25,13 @@
 				</div>
 
 				<div class="head__map">
-					<img src="img/map_mark.svg" alt="map_mark">
-					<button>Смотреть на карте</button>
+					<img class="map__icon" src="img/map_mark.svg" alt="map_mark">
+					<button class="btn__map">Смотреть на карте</button>
+
+					<div class="map__popup">
+						<button class="close__map"><img src="img/x.svg" alt="х"></button>
+						<iframe  src="https://yandex.ru/map-widget/v1/?um=constructor%3A9ae703b5f3f694bd20db1a0c197e230f89d1153c062908e54b1591262f2ba6ad&amp;source=constructor" frameborder="0"></iframe>
+					</div>
 				</div>
 
 				<div class="head__calc">
@@ -118,7 +123,7 @@
 			</section><!--end intro-->
 		</main>
 
-		<div class="popup__form__container">
+		<div class="popup__form__container disabled">
 			<div class="popup__form__inner">
 				<button class="exit__btn"><img src="img/x.svg" alt=""></button>
 				<h1>Быстро оставить заявку</h1>
@@ -126,10 +131,16 @@
 					в течение 5-10 минут в рабочее время</div>
 				<div class="form__text">Введите ваш номер телефона</div>
 					<form>
-						<input type="tel">
+						<input type="tel"  class="input__tel">
 						<button class="btn__submit">Перезвоните мне</button>
+
 						<div class="form__checkbox__text">
-							<input type="checkbox">
+							<label>
+								<div class="checkbox__block checked">
+								<input class="input__checkbox" type="checkbox" checked="checked">
+								<img src="img/check_mark_white.svg" alt="v">
+								</div>
+							</label>
 							<div class="form__checkbox__text">
 								<p>Нажимая кнопку вы соглашаетесь  с условиями <a href="#">Политики конфиденциальности</a></p>
 							</div>
@@ -142,7 +153,7 @@
 	</div><!--end wrapper-->
 
 
-
+	<script src="https://unpkg.com/imask"></script>
 	<script src="app.js"></script>
 </body>
 </html>

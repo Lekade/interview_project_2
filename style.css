@@ -89,6 +89,7 @@ html{
 }
 
 .head__map {
+  position: relative;
   width: 14.2rem;
   height: 1.9rem;
   margin-top: 4.3rem;
@@ -98,14 +99,17 @@ html{
   align-items: flex-start;
 }
 
-.head__map img{
+.head__map .map__icon{
   width: 1.2rem;
   height: 1.5rem;
 }
-.head__map button{
+
+
+.btn__map{
   position: relative;
   border: none;
   background-color: transparent;
+  outline: none;
   font-weight: 700;
   font-size: 1.1rem;
   line-height:1.5rem;
@@ -113,7 +117,8 @@ html{
   cursor: pointer;
 }
 
-.head__map button:after{
+
+button.btn__map:after{
   content: "";
   width: 100%;
   height: 0;
@@ -125,8 +130,70 @@ html{
   bottom: 0;
 }
 
-.head__map button:hover::after{
+.head__map:hover .btn__map:after{
   width: 60%;
+}
+
+.map__popup{
+  visibility: hidden;
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  top: 4rem;
+  left: -12rem;
+  transition: 0.2s;
+  background-color: #000;
+}
+
+.map__popup iframe{
+  width: 40rem;
+  height: 40rem;
+}
+
+.map__popup .close__map{
+  display: none;
+}
+
+.head__map:hover .map__popup{
+    visibility: visible;
+    transition: 0.2s;
+}
+
+.head__map .map__popup:hover{
+    visibility: visible;
+    transition: 0.2s;
+}
+
+.map__popup.full_width{
+  visibility: visible;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left:0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.map__popup.full_width iframe{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 5vh 5vw;
+}
+
+.map__popup.full_width .close__map{
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 2rem;
+  right: 4rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  z-index: 110;
+  cursor: pointer;
 }
 
 .head__calc {
@@ -260,6 +327,7 @@ html{
   font-size: 1.2rem;
   line-height: 2.1rem;
   letter-spacing: 0.05em;
+  outline: none;
   cursor: pointer;
 }
 
@@ -558,13 +626,20 @@ html{
 /*------------------------------------------*/
 
 .popup__form__container {
+  position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.80);
-    color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #FFFFFF;
+}
+
+.popup__form__container.disabled{
+  display: none;
 }
 
 .popup__form__inner {
@@ -618,10 +693,17 @@ html{
   width: 36.3rem;
   height: 8.5rem;
   margin-bottom: 2.5rem;
+  padding: 2.8rem 4.7rem 2.8rem 7.5rem;
   border: none;
   background: #FAFAFA;
   box-shadow: inset 0px 0px 21px rgba(255, 255, 255, 0.4);
   border-radius: 73px;
+
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  align-items: center;
+  letter-spacing: 0.03em;
 }
 
 .popup__form__inner .btn__submit{
@@ -637,10 +719,64 @@ html{
   line-height: 2.4rem;
   text-align: center;
   letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.popup__form__inner .btn__submit:disabled{
+  opacity: 50%;
+}
+
+.checkbox__block{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.15rem solid #FD2016;
+  background-color: transparent;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.checkbox__block.checked{
+  background-color: #FD2016;
+}
+
+.checkbox__block.checked img{
+  visibility: visible;
+}
+
+.checkbox__block input[type="checkbox"]{
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+}
+
+.checkbox__block img{
+  width: 0.8rem;
+  height: 0.6rem;
+  visibility: hidden;
 }
 
 .form__checkbox__text {
   display: flex;
   justify-content: center;
 
+}
+
+.form__checkbox__text p{
+  width: 31.9rem;
+  margin-left: 1.4rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #FFFFFF;
+}
+
+.form__checkbox__text p a{
+  color: #FD2016;
+  text-decoration: none;
 }
