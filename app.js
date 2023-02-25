@@ -64,15 +64,25 @@ inputCheckbox.addEventListener('change', e =>{
 
 
 
-
-
-
 document.addEventListener('click', e =>{
 	let click = e.composedPath()[0].className
 	if(click !== 'poput__form__inner'){
 
 	}
 })
+/*-----------------------header(menu)------------------------*/
+
+const header = document.querySelector('.header')
+const headerH = header.clientHeight / 3;
+
+document.onscroll = () =>{
+	let scroll = window.scrollY
+	if(scroll > headerH){
+		header.classList.add('fixed')
+	}else{
+		header.classList.remove('fixed')
+	}
+}
 
 /*-----------------------mask tel------------------------*/
 

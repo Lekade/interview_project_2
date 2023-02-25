@@ -16,7 +16,15 @@ p{
 
 html{
   font-size: calc(100vw/1920*10);
+
 }
+
+  @media (max-width: 1024px){
+    html{
+      font-size: calc(100vw/1740*10);
+    }
+
+  }
 
  body{
   font-family: 'Manrope', sans-serif;
@@ -32,7 +40,7 @@ html{
 /*-----------------------header-----------------------*/
 
 .header {
-  widht: 100vw;
+  width: 100%;
 }
 
 .header__top {
@@ -314,7 +322,7 @@ button.btn__map:after{
 
 .head__tel__bottom{
   position: relative;
-  width: 12.1rem;
+  width: 11.1rem;
   height: 1.7rem;
   margin: 0 auto;
   display: flex;
@@ -351,6 +359,10 @@ button.btn__map:after{
   width: 0.6rem;
   height: 0.6rem;
   margin-left: 0.6rem;
+}
+
+.burger{
+  display: none;
 }
 
 /*-----------------------nav-----------------------*/
@@ -547,11 +559,16 @@ button.btn__map:after{
 .intro__btn_red img{
   width: 2.202rem;
   height:2.195rem;
+  transition: 0.5s;
+}
+
+.intro__btn_red:hover img{
+  transform: rotate(45deg);
+  transition: 0.5s;
 }
 
 .intro__btn_red div{
   width: 25.5rem;
-  height: 4.9rem;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -780,3 +797,232 @@ button.btn__map:after{
   color: #FD2016;
   text-decoration: none;
 }
+
+
+/*--------------------------------@media-----------------------*/
+
+@media (max-width: 320px){
+
+html{
+  font-size: calc(100vw/320*10);
+}
+
+.header {
+  position: fixed;
+  z-index: 120;
+  padding: 0 2.3rem;
+}
+
+.header.fixed {
+  background-color: #fff;
+}
+
+.header.fixed .head__tel,
+.header.fixed .head__tel__center a,
+.header.fixed .head__tel__bottom{
+  color: #282828;
+}
+
+.header__top {
+  width: 100%;
+  margin: 0;
+
+  border-bottom: none;
+}
+
+.logo,
+.logo img{
+  width: 9.2rem;
+  height: 2.2rem;
+}
+
+.logo{
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+
+.logo p,
+.head__info,
+.head__map,
+.map__icon,
+.btn__map,
+.map__popup,
+.close__map,
+.head__calc,
+.head__messangers,
+.nav {
+  display: none;
+}
+
+.head__tel {
+  width: 10.5rem;
+  height: 4.6rem;
+  color: #fff;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.head__tel__top {
+  font-size: 0.6rem;
+}
+
+.head__tel__center{
+  width: 10.5rem;
+}
+
+.head__tel__center a{
+  font-size: 1.2rem;
+  color: #fff;
+}
+.head__tel__center img{
+  display: none;
+}
+
+.head__tel__bottom {
+  width: 6.3rem;
+  font-size: 0.6rem;
+  color: #fff;
+}
+
+.burger{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger img{
+  width: 1.475rem;
+  height: 1.361rem;
+}
+
+.black_burger{
+display: none;
+}
+
+.header.fixed .black_burger{
+  display: block;
+}
+
+.header.fixed .white_burger{
+  display: none;
+}
+
+
+
+.intro {
+  justify-content: center;
+}
+.scroll__down {
+  display: none;
+}
+
+.intro__content {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(180deg, rgba(22, 26, 30, 0.75) 0%, rgba(22, 26, 30, 0.2925) 36.3%), linear-gradient(270deg, rgba(22, 26, 30, 0) 0%, rgba(22, 26, 30, 0.6375) 79.17%), url(img/bg_intro.svg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto 51.1rem;
+}
+
+.intro_infoGrup {
+  width: 100%;
+  height: 51.1rem;
+  padding: 10rem 2.3rem 4.9rem;
+}
+.intro__h1 {
+  font-size: 2rem;
+  line-height: 2.9rem;
+  margin-bottom: 2.8rem;
+}
+
+.intro__text {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 2.9rem;
+}
+
+.intro__btns {
+  flex-wrap: wrap;
+}
+
+.intro__btn {
+  width: 27.6rem;
+  height: 6rem;
+  font-size: 1rem;
+  margin-right:0;
+  margin-top: 1.5rem;
+}
+
+button.intro__btn div{
+  font-size: 1rem;
+}
+
+button.intro__btn img{
+  display: none;
+}
+button.intro__btn_red div{
+  line-height: 1.5rem;
+}
+
+button.intro__btn_black div{
+  line-height: 2.5rem;
+}
+
+button.intro__btn_black div span{
+  color: #20C863;
+}
+
+.intro__items {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem 2rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto auto;
+  grid-gap: 1rem;
+}
+
+
+div.intro__item {
+  padding: 0;
+}
+
+div.intro__item p{
+  color:  #282828;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+div.intro__item img{
+  width: 1.32rem;
+  height: 0.92rem;
+  margin-bottom: 0.64rem;
+}
+
+div.intro__item:nth-child(3){
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+div.intro__item:nth-child(4){
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.popup__form__container {}
+.disabled {}
+.popup__form__inner {}
+.exit__btn {}
+.form__info {}
+.form__text {}
+.input__tel {}
+.btn__submit {}
+.form__checkbox__text {}
+.checkbox__block {}
+.checked {}
+.input__checkbox {}
+
+}
+
