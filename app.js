@@ -52,6 +52,7 @@ const inputCheckbox = document.querySelector('.input__checkbox')
 const checkboxBlock = document.querySelector('.checkbox__block')
 const btnSubmit = document.querySelector('.btn__submit')
 
+
 inputCheckbox.addEventListener('change', e =>{
 	if(inputCheckbox.checked == true){
 		checkboxBlock.classList.add('checked')
@@ -83,6 +84,18 @@ document.onscroll = () =>{
 		header.classList.remove('fixed')
 	}
 }
+
+
+const burger = document.querySelector('.burger')
+
+burger.addEventListener('click', e =>{
+	if(header.classList.contains('burger-open')){
+		header.classList.remove('burger-open')
+	}else{
+		header.classList.add('burger-open')
+	}
+});
+
 
 /*-----------------------mask tel------------------------*/
 
