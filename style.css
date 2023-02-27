@@ -233,6 +233,10 @@ button.btn__map:after{
   letter-spacing: 0.05em;
 }
 
+.head__calc a p:last-child{
+  width: 11.2rem;
+}
+
 .head__calc a p:after{
   content: "";
   width: 100%;
